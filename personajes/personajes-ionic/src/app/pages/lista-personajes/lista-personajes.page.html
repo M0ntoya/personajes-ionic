@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Lista de Personajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let p of personajes; let i = index" (click)="verDetalle(i)">
+      <ion-label>
+        <h2>{{ p.alias }}</h2>
+        <p>{{ p.nombre }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
